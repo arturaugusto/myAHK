@@ -3,11 +3,42 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-^SPACE::  Winset, Alwaysontop, , A
+;^SPACE::  Winset, Alwaysontop, , A
 
 SetDefaultMouseSpeed, 0 ; Sets the delay of mouse speed to instant
 
-Esc:: ToggleKeys := False
+;Esc:: {
+;    ToggleKeys := False
+;    Esc
+;}
+
+;$Shift::
+;	KeyWait, Shift, T0.1
+;	
+;	if (ErrorLevel) {
+;        ;Send long
+;    } else {
+;		KeyWait, Shift, D T0.1
+;
+;		if (ErrorLevel) {
+;            ; single shift
+;			ToggleKeys := false
+;
+;        } else {
+;            ; double shift
+;			ToggleKeys := True
+;            
+;            MouseMove, -25, 0, 100, R
+;            Sleep, 50
+;            MouseMove, 50, 0, 100, R
+;            Sleep, 50
+;            MouseMove, -25, 0, 100, R
+;
+;        }
+;	}
+;
+;	KeyWait, Shift
+;
 
 ^RAlt::
 ToggleKeys := !ToggleKeys
@@ -32,6 +63,13 @@ u::PgUp
 o::PgDn
 h::Home
 ç::End
+
+;8::Left
+;9::Down
+;0::Right
+;F10:: Up
+;F9::PgDn
+;F11::PgUp
 
 w::MouseMove, 0, -25, 100, R ; when you press w, mouse will move up 25 pixels
 s::MouseMove, 0, 25, 100, R ; when you press s, mouse will move down 25 pixels
