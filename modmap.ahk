@@ -1,22 +1,17 @@
+; CapsLock navigation
 SetCapsLockState, AlwaysOff
 
-CapsLock & i::Send {Up}
-CapsLock & k::Send {Down}
-CapsLock & j::Send {Left}
-CapsLock & l::Send {Right}
+Suspend On
 
-CapsLock & h::Send {Home}
-CapsLock & p::Send {End}
+i::Up
+j::Left
+k::Down
+l::Right
+h::Home
+p::End
+u::PgUp
+o::PgDn
 
-CapsLock & u::Send {PgUp}
-CapsLock & o::Send {PgDn}
 
-CapsLock & m::Send {Del}
-
-CapsLock::
-  state := GetKeyState("Capslock", "T")
-  if state
-    SetCapsLockState, AlwaysOff
-  else
-    SetCapsLockState, AlwaysOn
-return
+CapsLock::Suspend Off
+CapsLock Up::Suspend On
