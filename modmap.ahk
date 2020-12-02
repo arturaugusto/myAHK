@@ -1,17 +1,11 @@
 ; CapsLock navigation
 SetCapsLockState, AlwaysOff
 
-Suspend On
-
-i::Up
-j::Left
-k::Down
-l::Right
-h::Home
-p::End
-u::PgUp
-o::PgDn
-
-
-CapsLock::Suspend Off
-CapsLock Up::Suspend On
+CapsLock & i::Up
+CapsLock & j::Left
+CapsLock & k::Down
+CapsLock & l::Right
+CapsLock & h::Home
+CapsLock & p::End
+CapsLock & u::PgUp
+CapsLock & o::PgDn
