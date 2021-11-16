@@ -9,3 +9,6 @@ CapsLock & h::Home
 CapsLock & p::End
 CapsLock & u::PgUp
 CapsLock & o::PgDn
+
+
+^SPACE::  Winset, Alwaysontop, , A
